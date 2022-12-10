@@ -11,7 +11,11 @@
    margin: 0;
    padding: 0;
   }
-
+  .clearfix{
+    content: "";
+    display: block;
+    clear: both;
+  }
   button {
    position: absolute;
    bottom: 15vh;
@@ -28,21 +32,23 @@
   }
 
   button span {
-   display: block;
+   float: left;
    line-height: 100px;
-   position: relative;
+   position: absolute;
+   width: 100%;
    top: 0;
+   left: 0;
    transition: .2s linear;
   }
 
   button:hover span {
-   top: -100px;
+   left: -360px;
   }
  </style>
 </head>
 
 <body>
- <button><span>Kup teraz</span><span>Super okazja!</span></button>
+ <button class="clearfix"><span>Kup teraz</span><span>Super okazja!</span></button>
 </body>
 
 </html>
